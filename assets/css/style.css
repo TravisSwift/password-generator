@@ -1,0 +1,6 @@
+
+documemt.getElementById("box2").addEventListener("mouseout", changeColor);
+function changeColor() {
+    document.getlementById("box2").innerHTML = "MOUSE OUT!";
+    document.getElementById("box2").style.backgroundColor = "orange";
+};
