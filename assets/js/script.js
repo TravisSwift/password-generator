@@ -4,51 +4,63 @@ var = window.prompt("Enter your name: ");
 alert("Your name is " + name);
 */
 
-
-
-// question one for the user
-var passwordLength = window.prompt("Choose your password length between 8 and 128 characters");
-console.log("User chose a password length of " + passwordLength + " characters")
-
-    // question two  
-    var upperCase = window.prompt("Would you like to include upper case letters in the password? Click OK for yes.")
-    // console.log(upperCase);
-
-    console.log("User chose " + upperCase + " for upper case letters in a password")
-
-    // Question three
-    var lowerCase = window.prompt("Would you like to include lower case letters in the password? Click OK for yes.")
-    // console.log(lowerCase);
-
-    console.log("User chose " + lowerCase + " for lower chase letters in a password")
-
-    // Question four
-    var specialCharacters = window.prompt("Would you like to include special characters? Click OK for yes.")
-    // console.log(specialCharacters);
-
-    console.log("User chose " + specialCharacters + " for special characters in a password")
-
-    // Question five
-    var numbers = window.prompt("Would you like to include numbers? Click OK for yes.")
-    // console.log(numbers);  
-
-    console.log("User chose " + numbers + " for special characters in a password")
-
-
 // Get references to the #generate element    
 var generateBtn = document.querySelector("#generate");
 
-document.getElementById(passwordLength, upperCase, lowerCase, specialCharacters);
+
+// document.getElementById(passwordLength, upperCase, lowerCase, specialCharacters);
+
+/* var lowerCase = "abcdefghijklmnopqrstuvwxyz";
+var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var numbers = "1234567890";
+var specialCharacters = "!@#$%^&*()_-+="; */
 
 
 
 function generatePassword() {
-  console.log("Hey, you clicked the button!")
+
+  // User input
+  passwordLength = prompt("how many characters would you like your password? Choose between 8 and 128.");
+  console.log("Password length " + passwordLength);
+
+  if(passwordLength < 8 || passwordLength > 128) {
+  passwordLength = prompt("Please choose between 8 and 128");
+  }console.log("Pasword length " + passwordLength);
+
+  upperCase = prompt("Would you like to use uppercase letters?");
+  console.log("Uppercase " + upperCase);
+
+  /* if(upperCase null) {
+    upperCase = prompt("Please choose a valid response");
+    }console.log("Uppercase " + upperCase); */
+
+  lowerCase = prompt("Would you like to use lowercase letters?");
+  console.log("Lowercase " + lowerCase);
+
+  specialCharacters = prompt("Would you like to use spcial characters?");
+  console.log("Special characters " + specialCharacters);
+
+  
+  var lowerCase = "abcdefghijklmnopqrstuvwxyz";
+  var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var numbers = "1234567890";
+  var specialCharacters = "!@#$%^&*()_-+=";
+
+/*
+  var passwordVariables = lowerCase + upperCase + numbers + specialCharacters);
+  console.log("Your password is " + password);
+*/
+
+// var return = document.getElementById("password");
 
   return "Generated password will go here!";
+
+
 }
- 
-   
+
+
+
+
 
 // Write password to the #password input
 function writePassword() {
